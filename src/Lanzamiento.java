@@ -3,7 +3,7 @@ public class Lanzamiento {
 	private double distancia;
 	private boolean esValido;
 
-	public Lanzamiento(double angulo, double distancia) {
+	public Lanzamiento(double distancia,double angulo) {
 		this.angulo = angulo;
 		this.distancia = distancia;
 		calcularDistanciaFinal();
@@ -13,10 +13,10 @@ public class Lanzamiento {
 		//entre 22.5 y -22.5 100% de la distancia
 		//entre 90 y 22.5 y -90 y -22.5 80% de la distancia
 		//demas son tiros invalidos
-		if(angulo < 90 || angulo > -90) {
+		if(angulo < 90 && angulo > -90) {
 			esValido = true;
-			if(angulo > 22.5 || angulo < -22.5) {
-				distancia = getDistancia() * 0.8;
+			if(angulo >= 22.5 || angulo <= -22.5) {
+				distancia *= 0.8;
 			}
 		}
 		else {

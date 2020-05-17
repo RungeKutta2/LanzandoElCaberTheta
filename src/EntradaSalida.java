@@ -36,13 +36,9 @@ public class EntradaSalida {
 		BufferedWriter writer = null;
 		try {
 			writer = new BufferedWriter(new FileWriter(archivoDeEscritura));
-			for (Participante participante : competencia.getGanadoresConsistencia()) {
-				writer.write(participante.getNumero() + " ");
-			}
+			writer.write(competencia.getGanadoresConsistencia().toString());
 			writer.newLine();
-			for (Participante participante : competencia.getGanadoresDistancia()) {
-				writer.write(participante.getNumero() + " ");
-			}
+			writer.write(competencia.getGanadoresDistancia().toString());
 		} catch (IOException e) {
 			System.err.println(e.getMessage());
 		} finally {

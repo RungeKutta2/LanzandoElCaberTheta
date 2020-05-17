@@ -1,10 +1,46 @@
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Comparator;
+import java.util.LinkedList;
+
 
 public class Podio {
-	private List<Integer> participantes;
+	private LinkedList<Participante> participantes;
+	private Comparator<Participante> comparador;
 
-	public Podio(List<Integer> participantes) {
-		participantes = new ArrayList<Integer>();
+	public Podio(Comparator<Participante> comparador) {
+		this.comparador = comparador;
+		participantes = new LinkedList<Participante>();
+	}
+
+	public void add(Participante participante) {
+		boolean entro=false;
+		int i=0;
+		int len = participantes.size();
+			while (!entro && i<len) {
+				if(comparador.compare(participante, participantes.get(i)) > 0) {
+					entro=true;
+					participantes.add(i, participante);
+				}
+				i++;
+			}
+		
+		if(participantes.size()>3) {
+			participantes.removeLast();
+		}
+		else if(participantes.size()<3) {
+			if(!entro) {
+				participantes.add(participante);
+			}
+		}
+			
+	}
+
+	@Override
+	public String toString() {
+		String res = "";
+		for (Participante participante : participantes) {
+			res+=participante.getNumero()+" ";
+		}
+		return res;
 	}
 }
