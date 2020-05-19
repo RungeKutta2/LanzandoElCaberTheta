@@ -1,3 +1,4 @@
+package clases;
 public class Lanzamiento {
 	private double angulo;
 	private double distancia;

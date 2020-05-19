@@ -1,3 +1,4 @@
+package clases;
 import java.util.Comparator;
 
 public class DistanciaComparator implements Comparator<Participante> {

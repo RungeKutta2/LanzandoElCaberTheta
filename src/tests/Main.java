@@ -1,3 +1,7 @@
+package tests;
+
+import clases.Competencia;
+import clases.EntradaSalida;
 
 public class Main {
 	public static void main(String[] args) {
