@@ -36,6 +36,12 @@ class CompetenciaTest {
 				"./archivos/sinGanadoresDistancia_esperado.out", "./archivos/sinGanadoresDistancia_obtenida.out");	
 	}
 	
+	@Test
+	void pruebaExplosionTest(){
+		compararArchivos("./archivos/explosion.in", 
+				"./archivos/explosion_esperado.out", "./archivos/explosion_obtenida.out");	
+	}
+	
 	private void compararArchivos(String archivoEntrada,String archivoSalidaEsperada,String archivoSalidaObtenida) {
 	    EntradaSalida es = new EntradaSalida();
 		Competencia competencia = es.leerDeArchivo(archivoEntrada);

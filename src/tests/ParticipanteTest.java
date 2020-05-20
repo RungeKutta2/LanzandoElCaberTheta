@@ -87,5 +87,6 @@ class ParticipanteTest {
 		
 		assertEquals(0.57,participante.getDesviacionTotal(),0.1);
 	}
+	
 
 }
