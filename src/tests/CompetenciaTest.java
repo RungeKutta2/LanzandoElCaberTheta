@@ -38,8 +38,14 @@ class CompetenciaTest {
 	
 	@Test
 	void pruebaMaximosCompetidoresConGanadoresAlFinalTest(){
-		compararArchivos("./archivos/explosion.in", 
-				"./archivos/explosion_esperado.out", "./archivos/explosion_obtenida.out");	
+		compararArchivos("./archivos/maximosCompetidoresConGanadoresAlFinal.in", 
+				"./archivos/maximosCompetidoresConGanadoresAlFinal_esperado.out", "./archivos/maximosCompetidoresConGanadoresAlFinal_obtenida.out");	
+	}
+	
+	@Test
+	void pruebaPrioridadDistancia() {
+		compararArchivos("./archivos/prioridadDistancia.in", 
+				"./archivos/prioridadDistancia_esperado.out", "./archivos/prioridadDistancia_obtenida.out");
 	}
 	
 	private void compararArchivos(String archivoEntrada,String archivoSalidaEsperada,String archivoSalidaObtenida) {

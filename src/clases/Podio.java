@@ -41,4 +41,8 @@ public class Podio {
 		}
 		return res;
 	}
+	
+	public Integer size() {
+		return participantes.size();
+	}
 }
