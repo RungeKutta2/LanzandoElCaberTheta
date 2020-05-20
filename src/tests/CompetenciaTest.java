@@ -37,7 +37,7 @@ class CompetenciaTest {
 	}
 	
 	@Test
-	void pruebaExplosionTest(){
+	void pruebaMaximosCompetidoresConGanadoresAlFinalTest(){
 		compararArchivos("./archivos/explosion.in", 
 				"./archivos/explosion_esperado.out", "./archivos/explosion_obtenida.out");	
 	}
