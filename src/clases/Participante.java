@@ -45,7 +45,7 @@ public class Participante {
 	}
 
 	private double calcularDesviacionAngulo() {
-		return calcularDesviacion(lanzamientos.stream().map(x -> x.getAngulo()).collect(Collectors.toList()));
+		return calcularDesviacion(lanzamientos.stream().map(x -> Math.abs(x.getAngulo())).collect(Collectors.toList()));
 	}
 
 	public void calcularDistanciaTotal() {
@@ -59,8 +59,8 @@ public class Participante {
 	}
 
 	public void calcularDesviacionTotal() {
-		double desviacionDistancia = calcularDesviacionDistancia();
-		double desviacionAngulo = calcularDesviacionAngulo();
+		double desviacionDistancia = calcularDesviacionDistancia()*0.6;
+		double desviacionAngulo = calcularDesviacionAngulo()*0.4;
 		this.desviacionTotal = desviacionDistancia+desviacionAngulo;
 	}
 

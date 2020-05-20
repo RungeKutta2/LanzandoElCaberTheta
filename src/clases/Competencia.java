@@ -21,7 +21,9 @@ public class Competencia {
 				ganadoresConsistencia.add(participante);
 			}
 			participante.calcularDistanciaTotal();
-			ganadoresDistancia.add(participante);
+			if(participante.getDistanciaTotal()>0) {
+				ganadoresDistancia.add(participante);
+			}
 		}
 		
 	}

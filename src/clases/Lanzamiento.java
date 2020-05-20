@@ -11,12 +11,9 @@ public class Lanzamiento {
 	}
 
 	private void calcularDistanciaFinal() {
-		//entre 22.5 y -22.5 100% de la distancia
-		//entre 90 y 22.5 y -90 y -22.5 80% de la distancia
-		//demas son tiros invalidos
 		if(angulo < 90 && angulo > -90) {
 			esValido = true;
-			if(angulo >= 22.5 || angulo <= -22.5) {
+			if(angulo >= 30 || angulo <= -30) {
 				distancia *= 0.8;
 			}
 		}
